@@ -1,7 +1,9 @@
+//metric / US inputs
 const form = document.getElementById("bmi-form");
 const unitSelect = document.getElementById("unit");
 const metricInputs = document.getElementById("metric-inputs");
 const usInputs = document.getElementById("us-inputs");
+const classificationElement = document.getElementById("classification");
 const result = document.getElementById("result");
 
 unitSelect.addEventListener("change", () => {
@@ -31,6 +33,7 @@ form.addEventListener("submit", (e) => {
         bmi = 703 * weightLb / Math.pow(heightInTotal, 2);
     }
 
+    //BMI result
     if (isNaN(bmi)) {
         result.classList.add("hidden");
         alert("Please fill in all the fields correctly.");
@@ -42,6 +45,8 @@ form.addEventListener("submit", (e) => {
     }
 });
 
+
+//classification
 function getClassification(bmi) {
     if (bmi < 18.5) {
         return "Underweight";
@@ -53,3 +58,16 @@ function getClassification(bmi) {
         return "Obese";
     }
 }
+
+
+//reset button
+const resetButton = document.getElementById("reset");
+
+resetButton.addEventListener("click", () => {
+    form.reset();
+    result.classList.add("hidden");
+    classificationElement.classList.add("hidden");
+    metricInputs.classList.add("hidden");
+    usInputs.classList.add("hidden");
+    unitSelect.value = "choose";
+});

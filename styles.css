@@ -23,6 +23,12 @@ body {
     max-width: 400px;
 }
 
+.hidden {
+    display: none;
+}
+
+
+/* text */
 h1 {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -31,6 +37,8 @@ h1 {
     color: #333333
 }
 
+
+/* form */
 form {
     display: flex;
     flex-direction: column;
@@ -50,6 +58,8 @@ input, select {
     font-family: 'Poppins', sans-serif;
 }
 
+
+/* buttons */
 button {
     background-color: #55be36;
     color: #ffffff;
@@ -60,14 +70,22 @@ button {
     border-radius: 0.25rem;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin: 5px 0;
+    width: 60%;
 }
 
 button:hover {
     background-color: #42a025;
 }
 
-.hidden {
-    display: none;
+button#reset {
+    background-color: #cccccc;
+    color: #333333;
+    width: 38%;
+}
+
+button#reset:hover {
+    background-color: #bbbbbb;
 }
 
 

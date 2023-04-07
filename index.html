@@ -28,6 +28,7 @@
             <div id="metric-inputs" class="hidden">
                 <label for="height-cm">Height (cm):</label>
                 <input type="number" id="height-cm" min="50" max="300">
+                <br>
                 <label for="weight-kg">Weight (kg):</label>
                 <input type="number" id="weight-kg" min="10" max="500">
             </div>
@@ -39,7 +40,10 @@
                 <label for="weight-lb">Weight (lbs):</label>
                 <input type="number" id="weight-lb" min="22" max="1100">
             </div>
+        <div class="buttons">
             <button type="submit">Calculate BMI</button>
+            <button type="reset" id="reset">Reset</button>
+        </div>
         </form>
         <div id="result" class="hidden"></div>
     </div>
